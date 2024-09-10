@@ -330,6 +330,26 @@ return await new Promise((resolve, reject) => {
                                         </div>
                                     </div>
                                 </section>
+                                <h3 class="mt-5 pb-3">Keep the cluster sustainable</h3>
+                                <section class="impress_area" style="background-size: cover; background-repeat: repeat-x; background-position: center;">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-8 text-center" style="overflow: visible; max-width: 100%;">
+                                                <div id="try" style="overflow: hidden; max-width: 100%;"></div>
+                                                <p class="font-2">
+                                                    XRPL Cluster costs substantial amounts to maintain. 
+                                                    To keep it sustainable, the HTTPS API (https://xrplcluster.com) now allows high-rate access via on-demand layer-2 XRPL payments. 
+                                                    <br><br>
+                                                    Each requests will contribute <code class="badge alert-warning">~0.001 XRP</code> to the cluster.
+                                                    <br><br>
+                                                    Simply use the payment terminal by clicking below and following the instructions.
+                                                </p>
+                                                <button onclick="openDhaliPaymentDialog()" class="m-btn m-btn-theme2nd m-btn-radius">Payment terminal</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
 
                             </div>
                         </div>
@@ -409,5 +429,11 @@ return await new Promise((resolve, reject) => {
     <script src="static/js/jquery-3.2.1.min.js"></script>
     <script src="static/plugin/bootstrap/js/bootstrap.js"></script>
     <script src="static/js/custom.js?x2"></script>
+    <script>
+        function openDhaliPaymentDialog() {
+            var myWindow = window.open("https://pay.dhali.io/?exampleGetUrl=https://run.api.dhali.io/199fd80b-1776-4708-b1a1-4b2bb386435d/", "MsgWindow", "width=500,height=700");
+            myWindow.focus();
+        }
+    </script>
 </body>
 </html>
